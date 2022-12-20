@@ -1,16 +1,14 @@
 // DEPENDENCIES
 const express = require("express");
 const bookmarksController = require("./controllers/bookmarksController.js");
+const cors = require("cors");
 
 // CONFIGURATION
 const app = express();
 
 // MIDDLEWARE
 app.use(express.json()); // Parse incoming JSON
-// app.use((req, res, next) => {
-//   console.log("This code runs for every request");
-//   next();
-// });
+app.use(cors());
 
 // ROUTES
 app.get("/", (req, res) => {
