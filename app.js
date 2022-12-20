@@ -7,10 +7,10 @@ const app = express();
 
 // MIDDLEWARE
 app.use(express.json()); // Parse incoming JSON
-app.use((req, res, next) => {
-  console.log("This code runs for every request");
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log("This code runs for every request");
+//   next();
+// });
 
 // ROUTES
 app.get("/", (req, res) => {
